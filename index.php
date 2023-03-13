@@ -19,12 +19,7 @@ include_once( __DIR__ . "./partials/functions.php");
                 <label for="lunghezza">Lunghezza pasword: </label>
                 <input type="number" id="lunghezza" name="lunghezza" min="5" max="12">
             </div>
-            <button type="submit" class="btn btn-primary mb-2" value="genera password">GENERA</button>
-            <?php if () : ?>
-                <div class="alert alert-danger" role="alert">
-                    Scegli la lunghezza della password!
-                </div>
-            <?php endif; ?>    
+            <button type="submit" class="btn btn-primary mb-2" value="genera password">GENERA</button>  
         </form>
         <?php
             if (!empty($_GET["lunghezza"])) {
