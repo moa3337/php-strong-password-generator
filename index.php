@@ -33,8 +33,14 @@ include_once( __DIR__ . "./partials/functions.php");
             if (!empty($_GET["lunghezza"])) {
                 //ottengo la lunghezza che avrà la pasword dall'utente
                 $lunghezza = $_GET["lunghezza"];
+
                 //invoco la funzione "generaPasword" per generarla
                 $password = generaPassword($lunghezza);
+                
+                session_start();
+                //$_SESSION["password"] = generaPassword($lunghezza);
+                //header("Location: ./result.php");
+                
                 //stampo la pasword generata
                 echo "<h5>ecco la tua password:</h5>".$password;
             }

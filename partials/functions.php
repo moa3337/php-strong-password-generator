@@ -6,7 +6,7 @@ function generaPassword($lunghezza) {
     $password = "";
     //creo un ciclo per generare la password casuale
     for ($i=0; $i < $lunghezza; $i++) { 
-        $password .= $caratteri[rand(0, strlen($caratteri))];
+        $password .= $caratteri[rand(0, strlen($caratteri) -1)];
     }
     //ritorno la password generata
     return $password;
