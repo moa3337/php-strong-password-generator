@@ -1,6 +1,6 @@
 <?php
 session_start();
-$password = $_SESSION["password"];
+$password = $SESSION["password"];
 ?>
 
 <!DOCTYPE html>

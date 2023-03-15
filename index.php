@@ -1,5 +1,5 @@
 <?php
-include_once( __DIR__ . "./partials/functions.php");
+include_once( __DIR__ . "./result.php");
 ?>
 
 <!DOCTYPE html>
@@ -35,11 +35,11 @@ include_once( __DIR__ . "./partials/functions.php");
                 $lunghezza = $_GET["lunghezza"];
 
                 //invoco la funzione "generaPasword" per generarla
-                $password = generaPassword($lunghezza);
+                //$password = generaPassword($lunghezza);
                 
                 session_start();
-                //$_SESSION["password"] = generaPassword($lunghezza);
-                //header("Location: ./result.php");
+                $SESSION["password"] = generaPassword($lunghezza);
+                header("Location: ./result.php");
                 
                 //stampo la pasword generata
                 echo "<h5>ecco la tua password:</h5>".$password;
