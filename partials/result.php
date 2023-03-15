@@ -1,6 +1,6 @@
 <?php
 session_start();
-$password = $SESSION["password"];
+$password = $_SESSION["password"];
 ?>
 
 <!DOCTYPE html>
@@ -14,8 +14,10 @@ $password = $SESSION["password"];
 </head>
 <body>
     <div class="container">
-        <h2>Genera la tua paswor SICURA al 100%</h2>
-        <?php $password ?>    
+        <h2>Ecco la tua nuova password sicura:</h2>
+        <h5 class="text-success">
+            <?php echo $password ?>    
+        </h5>
     </div>
 </body>
 </html>
